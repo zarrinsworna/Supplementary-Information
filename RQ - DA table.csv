@@ -1,0 +1,45 @@
+DAT #,DAT name,Data Source Details,Data Source Link,Augmentation Type,Action
+1,Swap Word,-,-,RandomWordAug,swap
+2,Delete Word,-,-,,delete
+3,Spelling Augmenter,Pre-defined spelling mistake dictionary,https://github.com/makcedward/nlpaug/blob/master/nlpaug/res/word/spelling/spelling_en.txt,SpellingAug,substitute
+4,Split Words,-,-,SplitAug,split
+5,Synonym Wordnet Subs,"A large English lexical database where nouns, verbs, adjectives and adverbs are grouped into sets of cognitive synonyms (synsets).",https://wordnet.princeton.edu/,SynonymAug,substitute
+6,Synonym PPDB Subs,"PPDB is a database containing millions paraphrases to improve language processing by making systems more robust to language variability and unseen words. Six sizes, from S up to XXXL are available, where XXXL is the recommended one.",http://paraphrase.org/#/download,,
+7,Tf_Idf Ins,Train TF-IDF model on own corpus to augment data using TF-IDF statistics.,https://github.com/makcedward/nlpaug/blob/master/example/tfidf-train_model.ipynb,TfIdfAug,insert
+8,Tf_Idf Subs,,,,substitute
+9,Word2vec Googlenews Ins,Pre-trained vectors trained on part of Google News dataset (about 100 billion words). The model contains 300-dimensional vectors for 3 million words and phrases.,https://code.google.com/archive/p/word2vec/,WordEmbsAug,"insert,
+substitute"
+10,Word2vec Googlenews Subs,,,,
+11,Fasttext Wikinews Ins,"1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).","https://fasttext.cc/docs/en/english-vectors.html 
+
+https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip",,
+12,Fasttext Wikinews Subs,,,,
+13,Fasttext Wiki-News SWord Ins,"1 million word vectors trained with subword infomation on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).",https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M-subword.vec.zip,,
+14,Fasttext Wiki-News SWord Subs,,,,
+15,Fasttext C. Crawl Ins,2 million word vectors trained on Common Crawl (600B tokens).,https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip,,
+16,Fasttext C. Crawl Subs,,,,
+17,Fasttext C. Crawl SWord Ins,2 million word vectors trained with subword information on Common Crawl (600B tokens).,https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M-subword.zip,,
+18,Fasttext C. Crawl SWord Subs,,,,
+19,Fasttext C. Crawl & Wiki Ins,"Trained on Common Crawl and Wikipedia using fastText. These models were trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives",https://fasttext.cc/docs/en/crawl-vectors.html,,
+20,Fasttext C. Crawl & Wiki Subs,,,,
+21,Glove Wiki+Gword 50d Ins,"Trained on Wikipedia 2014 (http://dumps.wikimedia.org/enwiki/20140102/) + Gigaword 5 (https://catalog.ldc.upenn.edu/LDC2011T07) 
+6B tokens, 400K vocab, uncased, 50d, 100d, 200d, & 300d vectors, 822 MB.  This paper considered 50d and 300d, the minimum and maximum dimension size to check the variation.","https://nlp.stanford.edu/projects/glove/  
+
+http://nlp.stanford.edu/data/glove.6B.zip",,
+22,Glove Wiki+Gword 50d Subs,,,,
+23,Glove Wiki+Gword 300d Ins,,,,
+24,Glove Wiki+Gword 300d Subs,,,,
+25,Glove C. Crawl 300d Ins,"Common Crawl (42B tokens, 1.9M vocab, uncased, 300d vectors, 1.75 GB)",http://nlp.stanford.edu/data/glove.42B.300d.zip,,
+26,Glove C. Crawl 300d Subs,,,,
+27,Glove Twitter 200d Ins,"Twitter (2B tweets, 27B tokens, 1.2M vocab, uncased, 25d, 50d, 100d, & 200d vectors, 1.42 GB)
+This paper considered 200d as it contains maximum dataset size. Downloaded data 2.06 GB",http://nlp.stanford.edu/data/glove.twitter.27B.zip,,
+28,Glove Twitter 200d Subs,,,,
+29,Bert Base Ins,"12-layer, 768-hidden, 12-heads, 110M parameters.
+Trained on lower-cased English text.",https://huggingface.co/transformers/pretrained_models.html,ContextualWordEmbsAug,"insert, substitute"
+30,Bert Base Subs,,,,
+31,Distilbert Ins,"6-layer, 768-hidden, 12-heads, 66M parameters. The DistilBERT model distilled from the BERT model bert-base-uncased",https://github.com/huggingface/transformers/tree/master/examples/distillation,,
+32,Distilbert Subs,,,,
+33,Roberta Base Ins,"12-layer, 768-hidden, 12-heads, 125M parameters. RoBERTa using the BERT-base architecture",https://github.com/pytorch/fairseq/tree/master/examples/roberta,,
+34,Roberta Base Subs,,,,
+35,Distilroberta-Base Ins,"6-layer, 768-hidden, 12-heads, 82M parameters. The DistilRoBERTa model distilled from the RoBERTa model roberta-basecheckpoint.",https://github.com/huggingface/transformers/tree/master/examples/distillation,,
+36,Distilroberta-Base Subs,,,,
